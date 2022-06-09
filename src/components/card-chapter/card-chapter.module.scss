@@ -1,0 +1,75 @@
+$color-image-border: rgba(255, 255, 255, 0.6);
+$color-active-image-border: #fbe0dc;
+$color-voting-bg: #b4b7ff;
+$color-breeds-bg: #97eab9;
+$color-gallery-bg: #ffd280;
+
+.card {
+  width: 138px;
+}
+
+.active {
+  .image {
+    border-color: $color-active-image-border;
+  }
+
+  .button {
+    background-color: var(--colors-ui-primary);
+    color: var(--colors-white);
+  }
+}
+
+.image {
+  height: 198px;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: $color-image-border;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.voting {
+  background-color: $color-voting-bg;
+  background-image: url("../../assets/card-voting.png");
+  background-size: 100px 125px;
+  
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../assets/card-voting@2x.png");
+  }
+}
+
+.breeds {
+  background-color: $color-breeds-bg;
+  background-image: url("../../assets/card-breeds.png");
+  background-size: 117px 163px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../assets/card-breeds@2x.png");
+  }
+}
+
+.gallery {
+  background-color: $color-gallery-bg;
+  background-image: url("../../assets/card-gallery.png");
+  background-size: 112px 190px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../assets/card-gallery@2x.png");
+  }
+}
+
+.button {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--colors-ui-primary);
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--colors-elements-bg);
+  border: none;
+  margin-top: 20px;
+}

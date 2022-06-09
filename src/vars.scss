@@ -1,0 +1,16 @@
+:root {
+  --colors-ui-primary: #ff868e;
+  --colors-text-gray: #8c8c8c;
+  --colors-white: #ffffff;
+
+  [data-theme="light"] {
+    --colors-bg: #f8f8f7;
+    --colors-text: #1d1d1d;
+    --colors-elements-bg: #ffffff;
+  }
+  [data-theme="dark"] {
+    --colors-bg: #1d1d1d;
+    --colors-text: #ffffff;
+    --colors-elements-bg: rgba(255, 255, 255, 0.1);
+  }
+}
