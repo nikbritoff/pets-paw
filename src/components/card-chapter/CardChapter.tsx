@@ -1,4 +1,4 @@
-import styles from './card-chapter.module.scss';
+import styles from './CardChapter.module.scss';
 import cn from 'classnames';
 
 type CardActionProps = {

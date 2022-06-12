@@ -1,21 +1,17 @@
 import cn from 'classnames';
-import { useContext } from 'react';
-import { Context } from '../../hooks/theme-provider/theme-provider';
 import styles from './main.module.scss';
-import CardAction from '../../components/card-chapter/card-chapter';
+import CardAction from '../../components/card-chapter/CardChapter';
 import contentBg from '../../assets/main-content-bg.png';
 import contentBg2x from '../../assets/main-content-bg@2x.png';
-import Info from '../../components/info/info';
+import Info from '../../components/info/Info';
+import { useThemeContext } from '../../contexts/ThemeContext';
 
 function Main(): JSX.Element {
-  const {currentTheme, toggleTheme} = useContext(Context);
+  const {currentTheme, toggleTheme} = useThemeContext();
   return (
     <main className={styles.main} data-theme={currentTheme}>
       <section
-        className={cn(
-          styles.section,
-          styles.info,
-        )}
+        className={cn(styles.section, styles.info)}
       >
         <Info />
         <section className={styles['cards-list']}>
@@ -25,11 +21,7 @@ function Main(): JSX.Element {
         </section>
         <button onClick={toggleTheme}>{currentTheme}</button>
       </section>
-      <section className={cn(
-        styles.section,
-        styles.content,
-      )}
-      >
+      <section className={cn(styles.section, styles.content)}>
         <img
           className={styles.image}
           src={contentBg}

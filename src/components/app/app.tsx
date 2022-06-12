@@ -1,11 +1,11 @@
-import ThemeContext from '../../hooks/theme-provider/theme-provider';
+import { ThemeContextProvider } from '../../contexts/ThemeContext';
 import Main from '../../pages/main/main';
 
 function App(): JSX.Element {
   return (
-    <ThemeContext>
+    <ThemeContextProvider>
       <Main />
-    </ThemeContext>
+    </ThemeContextProvider>
   );
 }
 
