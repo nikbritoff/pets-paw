@@ -1,20 +1,11 @@
-import { useContext } from 'react';
-import { Theme } from '../../constants/theme';
-import { Context } from '../../hooks/theme-provider/theme-provider';
-import lightLogo from '../../assets/light-logo.svg';
-import darkLogo from '../../assets/dark-logo.svg';
+import {ReactComponent as Logo} from '../../assets/logo.svg';
+import styles from './header.module.scss';
 
 function Header(): JSX.Element {
-  const {currentTheme} = useContext(Context);
   return (
     <header>
-      <a href='/'>
-        <img
-          src={currentTheme === Theme.light ? lightLogo : darkLogo}
-          alt='PetsPaw'
-          width={106}
-          height={24}
-        />
+      <a className={styles.link} href='/'>
+        <Logo width={106} height={24} title='PetsPaw'/>
       </a>
     </header>
   );
