@@ -1,5 +1,5 @@
-import styles from './info.module.scss';
-import Header from '../header/header';
+import styles from './Info.module.scss';
+import Header from '../header/Header';
 
 function Info(): JSX.Element {
   return (

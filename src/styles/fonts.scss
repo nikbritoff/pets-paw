@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url('./fonts/jost-regular.woff2') format('woff2'),
+    url('./fonts/jost-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url('./fonts/jost-medium.woff2') format('woff2'),
+    url('./fonts/jost-medium.woff') format('woff');
+}

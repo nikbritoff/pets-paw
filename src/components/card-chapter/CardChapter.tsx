@@ -1,4 +1,4 @@
-import styles from './card-chapter.module.scss';
+import styles from './CardChapter.module.scss';
 import cn from 'classnames';
 
 type CardActionProps = {
@@ -7,7 +7,7 @@ type CardActionProps = {
 
 function CardAction({chapter}: CardActionProps): JSX.Element {
   const isActive = chapter === 'voting';
-  console.log(isActive);
+
   return (
     <div className={cn(
       styles.card,
