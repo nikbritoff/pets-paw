@@ -6,8 +6,8 @@ const Info = (): JSX.Element => {
     <>
       <Header />
       <section>
-        <p className={styles.caption}>Hi intern!</p>
-        <h2 className={styles.greeting}>Welcome to MSI 2021 Front-end test</h2>
+        <p className={styles.caption}>Hi user!</p>
+        <h2 className={styles.greeting}>Welcome to study project</h2>
         <p className={styles.invitation}>Lets start using The Dogs API</p>
       </section>
     </>
