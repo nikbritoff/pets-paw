@@ -4,6 +4,7 @@ import Info from '../../components/Info/Info';
 import CardAction from '../../components/CardChapter/CardChapter';
 import { useThemeContext } from '../../contexts/ThemeContext';
 import { ReactNode } from 'react';
+import { AppRoute } from '../../constants/appRoute';
 
 type MainLayoutProps = {
   children: ReactNode;
@@ -18,9 +19,9 @@ const MainLayout = ({ children, className = '' }: MainLayoutProps) => {
       <section className={cn(styles.section, styles.info)}>
         <Info />
         <section className={styles.cardsList}>
-          <CardAction chapter="voting" />
-          <CardAction chapter="breeds" />
-          <CardAction chapter="gallery" />
+          <CardAction to={AppRoute.Voting} />
+          <CardAction to={AppRoute.Breeds} />
+          <CardAction to={AppRoute.Gallery} />
         </section>
         <button onClick={toggleTheme}>{currentTheme}</button>
       </section>

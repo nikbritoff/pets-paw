@@ -1,17 +1,21 @@
 import styles from './CardChapter.module.scss';
 import cn from 'classnames';
+import { Link } from 'react-router-dom';
+import useLink from '../../hooks/useLink/useLink';
 
 type CardActionProps = {
-  chapter: string;
+  to: string;
 };
 
-const CardAction = ({ chapter }: CardActionProps): JSX.Element => {
-  const isActive = chapter === 'voting';
+const CardAction = ({ to }: CardActionProps): JSX.Element => {
+  const { isActive, currentPage } = useLink(to);
 
   return (
     <div className={cn(styles.card, isActive && styles.active)}>
-      <div className={cn(styles.image, styles[chapter])}></div>
-      <button className={styles.button}>{chapter}</button>
+      <div className={cn(styles.image, styles[currentPage])}></div>
+      <Link to={to} className={styles.button}>
+        {currentPage}
+      </Link>
     </div>
   );
 };
