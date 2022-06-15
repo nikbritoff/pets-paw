@@ -35,9 +35,9 @@ const useThemeContext = () => {
     throw new Error(
       'useThemeContext should be used only with ThemeContextProvider',
     );
-  } else {
-    return context;
   }
+
+  return context;
 };
 
 export { ThemeContextProvider, useThemeContext };

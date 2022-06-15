@@ -1,10 +1,10 @@
 import styles from './Info.module.scss';
-import Header from '../header/Header';
+import Header from '../Header/Header';
 
-function Info(): JSX.Element {
+const Info = (): JSX.Element => {
   return (
     <>
-    <Header />
+      <Header />
       <section>
         <p className={styles.caption}>Hi intern!</p>
         <h2 className={styles.greeting}>Welcome to MSI 2021 Front-end test</h2>
@@ -12,6 +12,6 @@ function Info(): JSX.Element {
       </section>
     </>
   );
-}
+};
 
 export default Info;

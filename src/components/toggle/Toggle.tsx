@@ -2,28 +2,22 @@ import styles from './Toggle.module.scss';
 import cn from 'classnames';
 
 type ToggleProps = {
-  name: string,
-  isActive: boolean,
-  changeAction: () => void,
-}
+  name: string;
+  isActive: boolean;
+  changeAction: () => void;
+};
 
-const Toggle = ({ name, isActive, changeAction: cb }: ToggleProps): JSX.Element => {
-
-  const handleToggleChange = () => {
-    cb();
-  }
-
+const Toggle = ({ name, isActive, changeAction }: ToggleProps): JSX.Element => {
   return (
     <>
       <input
         className={cn('visuallyHidden', styles.input)}
-        type='checkbox'
+        type="checkbox"
         name={name}
         id={name}
         checked={isActive}
-        onChange={handleToggleChange}
-      >
-      </input>
+        onChange={changeAction}
+      ></input>
       <label className={styles.label} htmlFor={name}></label>
     </>
   );
