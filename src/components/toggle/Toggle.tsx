@@ -1,5 +1,6 @@
-import styles from './Toggle.module.scss';
 import cn from 'classnames';
+
+import styles from './Toggle.module.scss';
 
 type ToggleProps = {
   name: string;

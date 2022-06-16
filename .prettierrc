@@ -2,5 +2,8 @@
   "bracketSpacing": true,
   "jsxBracketSameLine": true,
   "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]", "(.module.scss)"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

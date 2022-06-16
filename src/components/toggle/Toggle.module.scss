@@ -20,18 +20,6 @@
   }
 }
 
-// .label::before {
-//   position: absolute;
-//   top: 4px;
-//   left: 4px;
-//   content: '';
-//   display: block;
-//   width: 16px;
-//   height: 16px;
-//   background-color: var(--colors-ui-primary);
-//   border-radius: 50%;
-// }
-
 .input:checked + .label::before {
   left: auto;
   right: 4px;

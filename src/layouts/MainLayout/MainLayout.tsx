@@ -1,10 +1,11 @@
-import styles from './MainLayout.module.scss';
 import cn from 'classnames';
-import Info from '../../components/Info/Info';
-import CardAction from '../../components/CardChapter/CardChapter';
-import { useThemeContext } from '../../contexts/ThemeContext';
 import { ReactNode } from 'react';
+
+import CardAction from '../../components/CardChapter/CardChapter';
+import Info from '../../components/Info/Info';
 import { AppRoute } from '../../constants/appRoute';
+import { useThemeContext } from '../../contexts/ThemeContext';
+import styles from './MainLayout.module.scss';
 
 type MainLayoutProps = {
   children: ReactNode;
@@ -12,7 +13,7 @@ type MainLayoutProps = {
 };
 
 const MainLayout = ({ children, className = '' }: MainLayoutProps) => {
-  const { currentTheme, toggleTheme } = useThemeContext();
+  const { currentTheme } = useThemeContext();
 
   return (
     <main className={styles.main} data-theme={currentTheme}>
@@ -23,7 +24,6 @@ const MainLayout = ({ children, className = '' }: MainLayoutProps) => {
           <CardAction to={AppRoute.Breeds} />
           <CardAction to={AppRoute.Gallery} />
         </section>
-        <button onClick={toggleTheme}>{currentTheme}</button>
       </section>
       <section className={cn(styles.section, styles.content, className)}>
         {children}

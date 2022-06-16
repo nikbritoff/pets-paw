@@ -1,5 +1,5 @@
-import styles from './Info.module.scss';
 import Header from '../Header/Header';
+import styles from './Info.module.scss';
 
 const Info = (): JSX.Element => {
   return (

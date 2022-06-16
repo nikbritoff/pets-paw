@@ -1,7 +1,8 @@
-import styles from './CardChapter.module.scss';
 import cn from 'classnames';
 import { Link } from 'react-router-dom';
+
 import useLink from '../../hooks/useLink/useLink';
+import styles from './CardChapter.module.scss';
 
 type CardActionProps = {
   to: string;

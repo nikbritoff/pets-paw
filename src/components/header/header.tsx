@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { AppRoute } from '../../constants/appRoute';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';

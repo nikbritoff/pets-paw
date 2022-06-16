@@ -1,8 +1,9 @@
+import cn from 'classnames';
+
 import { Theme } from '../../constants/theme';
 import { useThemeContext } from '../../contexts/ThemeContext';
 import Toggle from '../Toggle/Toggle';
 import styles from './ThemeSwitcher.module.scss';
-import cn from 'classnames';
 
 const ThemeSwitcher = (): JSX.Element => {
   const { currentTheme, toggleTheme } = useThemeContext();
