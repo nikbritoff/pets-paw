@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+
 import { Theme } from '../constants/theme';
 
 type ThemeContextType = {
@@ -35,9 +36,9 @@ const useThemeContext = () => {
     throw new Error(
       'useThemeContext should be used only with ThemeContextProvider',
     );
-  } else {
-    return context;
   }
+
+  return context;
 };
 
 export { ThemeContextProvider, useThemeContext };

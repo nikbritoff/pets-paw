@@ -14,15 +14,16 @@
   justify-content: center;
   align-items: center;
   background-position: center;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
-.themeButtonLight {  
+.themeButtonLight {
   background-image: url('../../assets/icons/eye-open.svg');
   background-size: 16px 12px;
 }
 
-.themeButtonDark {  
+.themeButtonDark {
   background-image: url('../../assets/icons/eye-close.svg');
   background-size: 16px 8px;
 }

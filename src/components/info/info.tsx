@@ -1,17 +1,17 @@
+import Header from '../Header/Header';
 import styles from './Info.module.scss';
-import Header from '../header/Header';
 
-function Info(): JSX.Element {
+const Info = (): JSX.Element => {
   return (
     <>
-    <Header />
+      <Header />
       <section>
-        <p className={styles.caption}>Hi intern!</p>
-        <h2 className={styles.greeting}>Welcome to MSI 2021 Front-end test</h2>
+        <p className={styles.caption}>Hi user!</p>
+        <h2 className={styles.greeting}>Welcome to study project</h2>
         <p className={styles.invitation}>Lets start using The Dogs API</p>
       </section>
     </>
   );
-}
+};
 
 export default Info;
