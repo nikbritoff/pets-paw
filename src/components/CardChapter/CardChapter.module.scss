@@ -28,6 +28,7 @@ $color-gallery-bg: #ffd280;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  margin-bottom: 20px;
 }
 
 .voting {
@@ -58,21 +59,4 @@ $color-gallery-bg: #ffd280;
   @media (min-resolution: 2dppx) {
     background-image: url('../../assets/card-gallery@2x.png');
   }
-}
-
-.button {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: var(--colors-ui-primary);
-  width: 100%;
-  border-radius: 10px;
-  padding: 10px;
-  background-color: var(--colors-elements-bg);
-  border: none;
-  margin-top: 20px;
-  display: block;
-  text-align: center;
-  text-decoration: none;
 }

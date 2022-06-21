@@ -1,0 +1,70 @@
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--colors-ui-primary);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--colors-elements-bg);
+  border: none;
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  justify-content: center;
+  column-gap: 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.big {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 5px 30px;
+  }
+
+  &.wide {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: var(--colors-ui-secondary);
+  }
+
+  &:active {
+    color: var(--colors-white);
+    background-color: var(--colors-ui-primary);
+  }
+
+  &.secondary {
+    background-color: var(--colors-ui-secondary);
+
+    &:hover {
+      background-color: var(--colors-white);
+    }
+
+    &:active {
+      color: var(--colors-white);
+      background-color: var(--colors-ui-primary);
+    }
+  }
+}
+
+.icon {
+  padding: width / 4;
+  &.small {
+    width: 40px;
+    height: 40px;
+  }
+
+  &.big {
+    width: 60px;
+    height: 60px;
+  }
+
+  &img {
+    width: 50%;
+    height: auto;
+  }
+}
