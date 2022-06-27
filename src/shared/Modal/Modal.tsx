@@ -18,7 +18,6 @@ const Modal = ({ closeAction, children }: ModalProps) => {
     const handleEscPress = (evt: { key: string }) => {
       if (evt.key === 'Escape') {
         closeAction();
-        console.log('pressed');
       }
     };
 
