@@ -3,7 +3,7 @@ import { ReactNode, useEffect } from 'react';
 import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
 import Portal from '../../components/Portal/Portal';
 import { useThemeContext } from '../../contexts/ThemeContext';
-import Button, { ButtonVariant } from '../Button/Button';
+import Button, { ButtonSize, ButtonVariant } from '../Button/Button';
 import styles from './Modal.module.scss';
 
 type ModalProps = {
@@ -35,7 +35,11 @@ const Modal = ({ closeAction, children }: ModalProps) => {
         <div className={styles.wrapper}>
           <div className={styles.overlay} onClick={closeAction}></div>
           <div className={styles.content}>
-            <Button variant={[ButtonVariant.Icon]} onClick={closeAction}>
+            <Button
+              variant={[ButtonVariant.Icon]}
+              size={ButtonSize.Small}
+              onClick={closeAction}
+            >
               <CloseIcon />
             </Button>
             {children}

@@ -22,7 +22,7 @@ type ButtonProps = {
   isDisabled?: boolean;
   isActive?: boolean;
   variant?: string[];
-  size?: string;
+  size: string;
   onClick?: (...params: any) => void;
   to?: string;
 };
