@@ -52,7 +52,7 @@
 }
 
 .icon {
-  padding: width / 4;
+  background-color: var(--colors-white);
   &.small {
     width: 40px;
     height: 40px;
@@ -66,5 +66,14 @@
   &img {
     width: 50%;
     height: auto;
+  }
+
+  &:hover {
+    background-color: var(--colors-ui-secondary);
+  }
+
+  &:active {
+    color: var(--colors-white);
+    background-color: var(--colors-ui-primary);
   }
 }
