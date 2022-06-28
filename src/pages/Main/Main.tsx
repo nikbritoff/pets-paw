@@ -1,9 +1,15 @@
+import { useState } from 'react';
+
 import contentBg from '../../assets/main-content-bg.png';
 import contentBg2x from '../../assets/main-content-bg@2x.png';
 import MainLayout from '../../layouts/MainLayout/MainLayout';
+import Modal from '../../shared/Modal/Modal';
 import styles from './Main.module.scss';
 
 const Main = (): JSX.Element => {
+  const [isModalOpen, setIsModalOpen] = useState(true);
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
+
   return (
     <MainLayout>
       <img
@@ -14,6 +20,11 @@ const Main = (): JSX.Element => {
         width="100"
       />
       <div className={styles['content-wrapper']}></div>
+      {isModalOpen && (
+        <Modal closeAction={toggleModal}>
+          <p>Some text</p>
+        </Modal>
+      )}
     </MainLayout>
   );
 };

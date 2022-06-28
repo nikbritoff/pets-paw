@@ -1,7 +1,7 @@
 import cn from 'classnames';
-import { Link } from 'react-router-dom';
 
 import useLink from '../../hooks/useLink/useLink';
+import Button, { ButtonSize } from '../../shared/Button/Button';
 import styles from './CardChapter.module.scss';
 
 type CardActionProps = {
@@ -14,9 +14,9 @@ const CardAction = ({ to }: CardActionProps): JSX.Element => {
   return (
     <div className={cn(styles.card, isActive && styles.active)}>
       <div className={cn(styles.image, styles[currentPage])}></div>
-      <Link to={to} className={styles.button}>
+      <Button to={to} size={ButtonSize.Wide}>
         {currentPage}
-      </Link>
+      </Button>
     </div>
   );
 };
