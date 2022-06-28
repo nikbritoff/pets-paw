@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 
 import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
 import Portal from '../../components/Portal/Portal';

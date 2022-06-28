@@ -7,6 +7,7 @@ type PortalProps = {
 
 const Portal = ({ children }: PortalProps): JSX.Element => {
   const element = document.createElement('div');
+
   useEffect(() => {
     document.body.appendChild(element);
 
@@ -14,12 +15,6 @@ const Portal = ({ children }: PortalProps): JSX.Element => {
       document.body.removeChild(element);
     };
   });
-
-  // return (
-  //   <div>
-  //     {children}
-  //   </div>
-  // );
 
   return ReactDOM.createPortal(children, element);
 };
