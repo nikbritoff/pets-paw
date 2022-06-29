@@ -1,10 +1,12 @@
-import axios, {AxiosInstance, AxiosRequestConfig} from 'axios';
+import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
+
+import { API_KEY } from '../constants/api';
 
 export interface ApiResponse<T> {
-  data: T
-  headers: { [p: string]: string }
-  status: number
-  statusText: string
+  data: T;
+  headers: { [p: string]: string };
+  status: number;
+  statusText: string;
 }
 
 export default class ApiService {
@@ -16,6 +18,9 @@ export default class ApiService {
     this._api = axios.create({
       baseURL: 'https://api.thedogapi.com',
       timeout: 10000,
+      headers: {
+        'x-api-key': API_KEY,
+      },
     });
   }
 
