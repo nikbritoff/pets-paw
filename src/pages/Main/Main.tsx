@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { useBreeds } from '../../api/hooks';
 import contentBg from '../../assets/main-content-bg.png';
 import contentBg2x from '../../assets/main-content-bg@2x.png';
 import MainLayout from '../../layouts/MainLayout/MainLayout';
@@ -9,6 +10,9 @@ import styles from './Main.module.scss';
 const Main = (): JSX.Element => {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const toggleModal = () => setIsModalOpen(!isModalOpen);
+
+  const { data: res } = useBreeds();
+  console.log(res?.data[0]);
 
   return (
     <MainLayout>
