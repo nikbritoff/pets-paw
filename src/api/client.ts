@@ -1,7 +1,9 @@
 import { QueryClient } from 'react-query';
 
+import { notifyError } from '../utils/notify';
+
 const onError = (): void => {
-  console.log('Load Error');
+  notifyError('Load Error');
 };
 
 export const queryClient = new QueryClient({
