@@ -16,7 +16,7 @@ export default class ApiService {
 
   private constructor() {
     this._api = axios.create({
-      baseURL: 'https://api.thedogapi.com',
+      baseURL: 'https://api.thedogapi.com/v1',
       timeout: 10000,
       headers: {
         'x-api-key': API_KEY,

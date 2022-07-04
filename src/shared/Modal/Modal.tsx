@@ -38,6 +38,7 @@ const Modal = ({ closeAction, children }: ModalProps) => {
               variant={[ButtonVariant.Icon]}
               size={ButtonSize.Small}
               onClick={closeAction}
+              className={styles.close}
             >
               <CloseIcon />
             </Button>
