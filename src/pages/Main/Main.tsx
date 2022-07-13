@@ -1,3 +1,4 @@
+/* eslint-disable no-unreachable */
 import { useState } from 'react';
 
 import { useBreeds } from '../../api/hooks';
@@ -8,11 +9,13 @@ import Modal from '../../shared/Modal/Modal';
 import styles from './Main.module.scss';
 
 const Main = (): JSX.Element => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const closeModal = () => setOpen(false);
 
   const { data: breeds } = useBreeds();
   console.log(breeds?.data[0]);
+
+  throw new Error('Test error');
 
   return (
     <MainLayout>
