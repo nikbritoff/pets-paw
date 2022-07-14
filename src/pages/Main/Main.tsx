@@ -1,4 +1,3 @@
-/* eslint-disable no-unreachable */
 import { useState } from 'react';
 
 import { useBreeds } from '../../api/hooks';
@@ -14,8 +13,6 @@ const Main = (): JSX.Element => {
 
   const { data: breeds } = useBreeds();
   console.log(breeds?.data[0]);
-
-  throw new Error('Test error');
 
   return (
     <MainLayout>
