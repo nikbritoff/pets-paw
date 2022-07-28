@@ -1,4 +1,5 @@
-import { ErrorBoundary, Provider } from '@rollbar/react';
+import { Provider } from '@rollbar/react';
+import { ErrorBoundary } from 'react-error-boundary';
 import { QueryClientProvider } from 'react-query';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -12,15 +13,12 @@ import Gallery from '../../pages/Gallery/Gallery';
 import Main from '../../pages/Main/Main';
 import Voting from '../../pages/Voting/Voting';
 import { rollbar } from '../../utils/rollbar';
+import ErrorDisplay from '../ErrorDisplay/ErrorDisplay';
 
 const App = (): JSX.Element => {
   return (
     <Provider instance={rollbar}>
-      <ErrorBoundary
-        level="warn"
-        errorMessage="Error in my react App"
-        extra={{ additional: 'data' }}
-      >
+      <ErrorBoundary FallbackComponent={ErrorDisplay}>
         <Router>
           <ThemeContextProvider>
             <QueryClientProvider client={queryClient}>

@@ -1,0 +1,16 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colors-black);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--colors-text-gray);
+  padding: 40px;
+  border-radius: 20px;
+}
