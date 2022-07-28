@@ -1,9 +1,11 @@
 .switcherWrapper {
   height: 24px;
   display: flex;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
-.themeButton {
+.lngButton {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -18,12 +20,12 @@
   cursor: pointer;
 }
 
-.themeButtonLight {
-  background-image: url('../../assets/icons/eye-open.svg');
+.lngButtonRu {
+  background-image: url('../../assets/icons/flag-ru.svg');
   background-size: 16px 12px;
 }
 
-.themeButtonDark {
-  background-image: url('../../assets/icons/eye-close.svg');
-  background-size: 16px 8px;
+.lngButtonEn {
+  background-image: url('../../assets/icons/flag-gb.svg');
+  background-size: 16px 12px;
 }
