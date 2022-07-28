@@ -2,19 +2,19 @@
   --colors-ui-primary: #ff868e;
   --colors-text-gray: #8c8c8c;
   --colors-white: #ffffff;
-  
-  [data-theme="light"] {
+
+  [data-theme='light'] {
     --colors-bg: #f8f8f7;
     --colors-text: #1d1d1d;
     --colors-elements-bg: #ffffff;
     --colors-ui-secondary: #fbe0dc;
-    --colors-theme-switch-bg: #ffffff;
+    --colors-switch-bg: #ffffff;
   }
-  [data-theme="dark"] {
+  [data-theme='dark'] {
     --colors-bg: #1d1d1d;
     --colors-text: #ffffff;
     --colors-elements-bg: rgba(255, 255, 255, 0.1);
     --colors-ui-secondary: rgba(255, 134, 142, 0.2);
-    --colors-theme-switch-bg: rgba(255, 255, 255, 0.05);
+    --colors-switch-bg: rgba(255, 255, 255, 0.05);
   }
 }
