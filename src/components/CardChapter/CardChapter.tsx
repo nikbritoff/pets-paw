@@ -12,7 +12,6 @@ type CardActionProps = {
 const CardAction = ({ to }: CardActionProps): JSX.Element => {
   const { isActive, currentPage } = useLink(to);
   const { t } = useTranslation();
-  console.log(currentPage);
 
   return (
     <div className={cn(styles.card, isActive && styles.active)}>
