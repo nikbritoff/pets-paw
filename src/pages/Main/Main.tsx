@@ -8,11 +8,11 @@ import Modal from '../../shared/Modal/Modal';
 import styles from './Main.module.scss';
 
 const Main = (): JSX.Element => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
-  const toggleModal = () => setIsModalOpen(!isModalOpen);
+  const [open, setOpen] = useState(false);
+  const closeModal = () => setOpen(false);
 
-  const { data: res } = useBreeds();
-  console.log(res?.data[0]);
+  const { data: breeds } = useBreeds();
+  console.log(breeds?.data[0]);
 
   return (
     <MainLayout>
@@ -24,8 +24,8 @@ const Main = (): JSX.Element => {
         width="100"
       />
       <div className={styles['content-wrapper']}></div>
-      {isModalOpen && (
-        <Modal closeAction={toggleModal}>
+      {open && (
+        <Modal closeAction={closeModal}>
           <p>Some text</p>
         </Modal>
       )}
