@@ -1,5 +1,5 @@
-import { ErrorBoundary, Provider } from '@rollbar/react';
-import { ReactElement } from 'react';
+import { Provider } from '@rollbar/react';
+import { ErrorBoundary } from 'react-error-boundary';
 import { QueryClientProvider } from 'react-query';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -12,33 +12,13 @@ import Breeds from '../../pages/Breeds/Breeds';
 import Gallery from '../../pages/Gallery/Gallery';
 import Main from '../../pages/Main/Main';
 import Voting from '../../pages/Voting/Voting';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { rollbar, rollbarConfig } from '../../utils/rollbar';
-
-type ErrorDisplayProps = {
-  error?: Error;
-  // resetError: Function,
-};
-
-const ErrorDisplay = ({
-  error,
-}: ErrorDisplayProps): ReactElement => ( // <-- props passed to fallbackUI component
-  <div>
-    <h1>A following error has occured:</h1>
-    <p>{error?.message || 'unknown error'}</p>
-  </div>
-);
+import { rollbar } from '../../utils/rollbar';
+import ErrorDisplay from '../ErrorDisplay/ErrorDisplay';
 
 const App = (): JSX.Element => {
   return (
-    // <Provider instance={rollbar}>
-    <Provider config={rollbarConfig}>
-      <ErrorBoundary
-        fallbackUI={<ErrorDisplay />}
-        // level="warn"
-        // errorMessage="Error in my react App"
-        // extra={{ additional: 'data' }}
-      >
+    <Provider instance={rollbar}>
+      <ErrorBoundary FallbackComponent={ErrorDisplay}>
         <Router>
           <ThemeContextProvider>
             <QueryClientProvider client={queryClient}>
