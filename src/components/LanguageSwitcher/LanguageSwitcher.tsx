@@ -1,16 +1,14 @@
 import cn from 'classnames';
 import i18next from 'i18next';
 
-import { Theme } from '../../constants/theme';
-import { useThemeContext } from '../../contexts/ThemeContext';
+import { Lng } from '../../constants/lng';
 import Toggle from '../Toggle/Toggle';
 import styles from './LanguageSwitcher.module.scss';
 
 const LanguageSwitcher = (): JSX.Element => {
-  const { currentTheme, toggleTheme } = useThemeContext();
-  const isThemeDark = currentTheme === Theme.dark;
+  const isEnglish = i18next.language === Lng.en;
   const changeLanguage = () => {
-    const nextLanguage = i18next.language === 'ru' ? 'en' : 'ru';
+    const nextLanguage = i18next.language === Lng.ru ? Lng.en : Lng.ru;
     i18next.changeLanguage(nextLanguage);
   };
 
@@ -18,18 +16,17 @@ const LanguageSwitcher = (): JSX.Element => {
     <div className={styles.switcherWrapper}>
       <button
         className={cn(
-          styles.themeButton,
-          isThemeDark ? styles.themeButtonDark : styles.themeButtonLight,
+          styles.lngButton,
+          isEnglish ? styles.lngButtonEn : styles.lngButtonRu,
         )}
         onClick={changeLanguage}
       >
-        {i18next.language}
         <span className="visuallyHidden">Change language</span>
       </button>
       <Toggle
-        name="theme-switcher"
-        isActive={isThemeDark}
-        changeAction={toggleTheme}
+        name="lng-switcher"
+        isActive={isEnglish}
+        changeAction={changeLanguage}
       />
     </div>
   );

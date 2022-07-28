@@ -1,7 +1,12 @@
 {
   "welcome": {
-    "caption" : "Hi user!",
+    "caption": "Hi user!",
     "greeting": "Welcome to study project",
     "invitation": "Lets start using The Dogs API"
+  },
+  "page" : {
+    "voting": "Voting",
+    "breeds": "Breeds",
+    "gallery": "Gallery"
   }
 }
