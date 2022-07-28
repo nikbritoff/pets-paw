@@ -17,9 +17,9 @@ const App = (): JSX.Element => {
   return (
     <Provider instance={rollbar}>
       <ErrorBoundary
-      // level="warn"
-      // errorMessage="Error in my react App"
-      // extra={{ additional: 'data' }}
+        level="warn"
+        errorMessage="Error in my react App"
+        extra={{ additional: 'data' }}
       >
         <Router>
           <ThemeContextProvider>

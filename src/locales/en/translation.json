@@ -1,0 +1,7 @@
+{
+  "welcome": {
+    "caption" : "Hi user!",
+    "greeting": "Welcome to study project",
+    "invitation": "Lets start using The Dogs API"
+  }
+}
