@@ -11,15 +11,15 @@ import Breeds from '../../pages/Breeds/Breeds';
 import Gallery from '../../pages/Gallery/Gallery';
 import Main from '../../pages/Main/Main';
 import Voting from '../../pages/Voting/Voting';
-import { rollbarConfig } from '../../utils/rollbar';
+import { rollbar } from '../../utils/rollbar';
 
 const App = (): JSX.Element => {
   return (
-    <Provider config={rollbarConfig}>
+    <Provider instance={rollbar}>
       <ErrorBoundary
-        level="warn"
-        errorMessage="Error in my react App"
-        extra={{ additional: 'data' }}
+      // level="warn"
+      // errorMessage="Error in my react App"
+      // extra={{ additional: 'data' }}
       >
         <Router>
           <ThemeContextProvider>
